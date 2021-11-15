@@ -1,0 +1,71 @@
+MSCOUTPUTCDR DEFINITIONS IMPLICIT TAGS ::=
+BEGIN
+
+CallDataRecord ::= [20] SEQUENCE {
+
+   tag0   [0] OCTET STRING (SIZE(1..n)),
+   tag3   [3] OCTET STRING (SIZE(1..n)),
+   tag4   [4] OCTET STRING (SIZE(1..n)),
+   tag27  [27] OCTET STRING (SIZE(1..n)),
+   tag5   [5] TAG5_Seq,
+   tag10  [10] OCTET STRING (SIZE(1..n)),
+   tag11  [11] TAG11_Seq,
+   tag25  [25] OCTET STRING (SIZE(1..n)),
+   tag13  [13] OCTET STRING (SIZE(1..n)),
+   tag14  [14] TAG14_Seq,
+   tag28  [28] OCTET STRING (SIZE(1..n)),
+   tag32  [32] OCTET STRING (SIZE(1..n)),
+   tag33  [33] OCTET STRING (SIZE(1..n)),
+   tag6   [6] OCTET STRING (SIZE(1..n)),
+   tag22  [22] IA5String (SIZE(1..n)),
+   tag12  [12] IA5String (SIZE(1..n)),
+   tag26  [26] IA5String (SIZE(1..n)),
+   tag29  [29] OCTET STRING (SIZE(1..n)),
+   tag16  [16] OCTET STRING (SIZE(1..n)),
+   tag17  [17] OCTET STRING (SIZE(1..n)),
+   tag19  [19] OCTET STRING (SIZE(1..n)),
+   tag15  [15] TAG15_Seq,
+   tag7   [7] OCTET STRING (SIZE(1..n)),
+   tag8   [8] OCTET STRING (SIZE(1..n)),
+   tag9   [9] OCTET STRING (SIZE(1..n)),
+   tag18  [18] OCTET STRING (SIZE(1..n)) OPTIONAL,
+   tag20  [20] TAG20_Seq OPTIONAL,
+   tag21  [21] OCTET STRING (SIZE(1..n)) OPTIONAL,
+   tag24  [24] OCTET STRING (SIZE(1..n))
+
+   }
+
+
+TAG5_Seq ::= SEQUENCE {
+   tag5_0     [0] OCTET STRING (SIZE(1..n))
+   }
+
+TAG11_Seq ::= SEQUENCE {
+   tag11_0     [0] OCTET STRING (SIZE(1..n))
+   }
+
+TAG14_Seq ::= SEQUENCE {
+   tag14_1_seq  [0] TAG14_1_Seq
+   }
+
+TAG14_1_Seq ::= SEQUENCE {
+   tag14_1_0     [0] OCTET STRING (SIZE(1..n))
+   }
+
+TAG15_Seq ::= SEQUENCE OF  [UNIVERSAL 16] TAG16_Seq
+
+TAG20_Seq ::= SEQUENCE {
+   tag20_0   [0] OCTET STRING (SIZE(1..n))
+   }
+
+TAG16_Seq ::= SEQUENCE {
+   tag16_1  [1] OCTET STRING (SIZE(1..n)) OPTIONAL,
+   tag16_2  [2] OCTET STRING (SIZE(1..n)) OPTIONAL,
+   tag16_3  [3] OCTET STRING (SIZE(1..n)) OPTIONAL,
+   tag16_4  [4] OCTET STRING (SIZE(1..n)) OPTIONAL,
+   tag16_5  [5] OCTET STRING (SIZE(1..n)) OPTIONAL,
+   tag16_6  [6] OCTET STRING (SIZE(1..n)) OPTIONAL
+   }
+
+END
+

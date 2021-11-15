@@ -1,0 +1,445 @@
+SGW_R9 DEFINITIONS ::=
+BEGIN
+
+GPRSRecord ::= CHOICE
+{
+	sGWRecord	SGWRecord
+}
+
+SGWRecord ::= [78] SET
+{
+	recordType			[0] IMPLICIT RecordType,
+	servedIMSI			[3] IMPLICIT IMSI,
+	s-GWAddress			[4] EXPLICIT GSNAddress,
+	chargingID			[5] IMPLICIT ChargingID,
+	servingNodeAddress		[6] IMPLICIT SEQUENCE OF GSNAddress OPTIONAL,
+	accessPointNameNI		[7] IMPLICIT AccessPointNameNI OPTIONAL,
+	pdpPDNType			[8] IMPLICIT PDPType OPTIONAL,
+	servedPDPPDNAddress		[9] EXPLICIT PDPAddress OPTIONAL,
+	listOfTrafficVolumes		[12] IMPLICIT SEQUENCE OF ChangeOfCharCondition OPTIONAL,
+	recordOpeningTime		[13] IMPLICIT TimeStamp,
+	duration			[14] IMPLICIT CallDuration,
+	causeForRecClosing		[15] IMPLICIT CauseForRecClosingSGW,
+	recordSequenceNumber		[17] IMPLICIT INTEGER OPTIONAL,
+	nodeID				[18] IMPLICIT NodeID OPTIONAL,
+	localSequenceNumber		[20] IMPLICIT LocalSequenceNumber,
+	servedMSISDN			[22] IMPLICIT MSISDN OPTIONAL,
+	chargingCharacteristics		[23] IMPLICIT ChargingCharacteristics,
+	servingNodePLMNIdentifier	[27] IMPLICIT PLMN-Id OPTIONAL,
+	servedIMEISV			[29] IMPLICIT IMEI OPTIONAL,
+	rATType				[30] IMPLICIT RATType OPTIONAL,
+	mSTimeZone			[31] IMPLICIT MSTimeZone OPTIONAL,
+	sGWChange			[34] IMPLICIT SGWChange OPTIONAL,
+	servingNodeType			[35] IMPLICIT SEQUENCE OF ServingNodeType,
+	p-GWAddressUsed			[36] EXPLICIT GSNAddress OPTIONAL,
+	p-GWPLMNIdentifier		[37] IMPLICIT PLMN-Id OPTIONAL,
+	pDNConnectionID			[40] IMPLICIT ChargingID OPTIONAL,
+	servedPDPPDNAddressExt		[43] EXPLICIT PDPAddress OPTIONAL,
+	s-GWiPv6Address			[48] EXPLICIT GSNAddress OPTIONAL,
+	servingNodeiPv6Address		[49] EXPLICIT SEQUENCE OF GSNAddress OPTIONAL,
+	p-GWiPv6AddressUsed		[50] EXPLICIT GSNAddress OPTIONAL,
+	totalUplinkVolume		[201] INTEGER OPTIONAL,
+	totalDownlinkVolume		[202] INTEGER OPTIONAL,
+	serialNumber			[203] IA5String OPTIONAL
+}
+
+SGWChange                ::= BOOLEAN
+ChangeOfServiceConditions ::= SEQUENCE OF ChangeOfServiceCondition
+AccessPointNameNI ::= IA5String (SIZE(1..63))
+AddressString ::= OCTET STRING (SIZE (1..20))
+
+APNSelectionMode ::= ENUMERATED
+{
+	mSorNetworkProvidedSubscriptionVerified (0),
+	mSProvidedSubscriptionNotVerified (1),
+	networkProvidedSubscriptionNotVerified (2)
+}
+
+
+CallDuration ::= INTEGER
+
+RecordType ::= ENUMERATED
+{
+	pGWRecord (85),
+	sGWRecord (84)
+}
+
+CauseForRecClosing ::= ENUMERATED
+{
+	normalRelease (0),
+	abnormalRelease (4),
+	volumeLimit (16),
+	timeLimit (17),
+	sGSNChange (18),
+	maxChangeCond (19),
+	rATChange (22),
+	mSTimeZoneChange (23),
+	sGSNPLMNIDChange (24),
+	managementInitRelease (100),
+	creditControlChange (102),
+	creditControlInitRelease (104),
+	policyControlInitRelease (105)
+}
+
+CauseForRecClosingPGW ::= ENUMERATED
+{
+	normalRelease (0),
+	abnormalRelease (4),
+	volumeLimit (16),
+	timeLimit (17),
+	servingNodeChange (18), 
+	maxChangeCond (19),
+	rATChange (22),
+	mSTimeZoneChange (23),
+	sGSNPLMNIDChange (24),
+	managementInitRelease (100),
+	creditControlChange (102),
+	creditControlInitRelease (104),
+	policyControlInitRelease (105)
+}
+
+CauseForRecClosingSGW ::= INTEGER
+{
+	normalRelease (0),
+	abnormalRelease (4),
+	volumeLimit (16),
+	timeLimit (17),
+	servingNodeChange        (18)
+}
+
+ChangeCondition ::= ENUMERATED
+{
+	qoSChange (0),
+	tariffTime (1),
+	recordClosure (2),
+	failureHandlingContinueOngoing (3),
+	failureHandlingRetryandTerminateOngoing (4),
+	failureHandlingTerminateOngoing (5)
+}
+
+ChangeOfCharCondition ::= SEQUENCE
+{
+	qosRequested	[1] IMPLICIT QoSInformation OPTIONAL,
+	qosNegotiated [2] EXPLICIT QoSInformation OPTIONAL,
+	dataVolumeGPRSUplink [3] IMPLICIT DataVolumeGPRS,
+	dataVolumeGPRSDownlink [4] IMPLICIT DataVolumeGPRS,
+	changeCondition [5] IMPLICIT ChangeCondition,
+	changeTime [6] IMPLICIT TimeStamp,
+	userLocationInformation [8] IMPLICIT OCTET STRING OPTIONAL,
+	ePCQoSInformation        [9] IMPLICIT EPCQoSInformation OPTIONAL
+}
+
+ChangeOfServiceCondition ::= SEQUENCE
+{
+	ratingGroup			[1] RatingGroupId,
+	resultCode			[3] ResultCode OPTIONAL,
+	localSequenceNumber		[4] LocalSequenceNumber OPTIONAL,
+	timeOfFirstUsage		[5] TimeStamp OPTIONAL,
+	timeOfLastUsage			[6] TimeStamp OPTIONAL,
+	timeUsage			[7] CallDuration OPTIONAL,
+	serviceConditionChange		[8] ServiceConditionChange,
+	qoSInformationNeg		[9] QoSInformation OPTIONAL,
+	sgsn-Address			[10] EXPLICIT GSNAddress OPTIONAL,
+	sGSNPLMNIdentifier		[11] PLMN-Id OPTIONAL,
+	datavolumeFBCUplink		[12] DataVolumeGPRS OPTIONAL,
+	datavolumeFBCDownlink		[13] DataVolumeGPRS OPTIONAL,
+	timeOfReport			[14] TimeStamp,
+	rATType				[15] RATType OPTIONAL,
+	failureHandlingContinue		[16] FailureHandlingContinue OPTIONAL,
+	serviceIdentifier		[17] ServiceIdentifier OPTIONAL,
+	pSFurnishChargingInformation	[18] PSFurnishChargingInformation OPTIONAL,
+	aFRecordInformation		[19] SEQUENCE OF OCTET STRING OPTIONAL,
+	userLocationInformation		[20] OCTET STRING OPTIONAL,
+	eventBasedChargingInformation	[21] EventBasedChargingInformation OPTIONAL
+}
+
+ChangeOfServiceConditionPGW ::= SEQUENCE
+{
+	ratingGroup			[1] RatingGroupId,
+	resultCode			[3] ResultCode OPTIONAL,
+	localSequenceNumber		[4] LocalSequenceNumber OPTIONAL,
+	timeOfFirstUsage		[5] TimeStamp OPTIONAL,
+	timeOfLastUsage			[6] TimeStamp OPTIONAL,
+	timeUsage			[7] CallDuration OPTIONAL,
+	serviceConditionChangePGW	[8] ServiceConditionChangePGW,
+	qoSInformationNeg		[9] EXPLICIT EPCQoSInformation OPTIONAL, 
+	sgsn-Address			[10] EXPLICIT GSNAddress OPTIONAL,
+	sGSNPLMNIdentifier		[11] PLMN-Id OPTIONAL,
+	datavolumeFBCUplink		[12] DataVolumeGPRS OPTIONAL,
+	datavolumeFBCDownlink		[13] DataVolumeGPRS OPTIONAL,
+	timeOfReport			[14] TimeStamp,
+	rATType				[15] RATType OPTIONAL,
+	failureHandlingContinue		[16] FailureHandlingContinue OPTIONAL,
+	serviceIdentifier		[17] ServiceIdentifier OPTIONAL,
+	pSFurnishChargingInformation	[18] PSFurnishChargingInformation OPTIONAL,
+	aFRecordInformation		[19] SEQUENCE OF AFRecordInformation OPTIONAL, 
+	userLocationInformation		[20] OCTET STRING OPTIONAL,
+	eventBasedChargingInformation	[21] EventBasedChargingInformation OPTIONAL,
+	sidNew				[22] SEQUENCE OF INTEGER OPTIONAL
+}
+
+AFRecordInformation ::= SEQUENCE
+{
+	aFChargingIdentifier [1] AFChargingIdentifier
+}
+AFChargingIdentifier ::= OCTET STRING
+
+ChargingCharacteristics ::= OCTET STRING (SIZE (2))
+ChargingID ::= INTEGER ((0..4294967295))
+
+ChChSelectionMode ::= ENUMERATED
+{
+	sGSNSupplied (0),
+	homeDefault (3),
+	roamingDefault (4),
+	visitingDefault (5),
+	radiusSupplied (100),
+	roamingClassBased  (101)
+}
+
+ChChSelectionModePGW ::= ENUMERATED
+{
+	servingNodeSupplied (0),
+	homeDefault (3),
+	roamingDefault (4),
+	visitingDefault (5),
+	radiusSupplied (100),
+	roamingClassBased  (101)
+}
+
+DataVolumeGPRS ::= INTEGER
+DynamicAddressFlag ::= BOOLEAN
+
+EPCQoSInformation ::= SEQUENCE
+{
+	qCI [1] IMPLICIT INTEGER,
+	maxRequestedBandwithUL [2] IMPLICIT INTEGER OPTIONAL,
+	maxRequestedBandwithDL [3] IMPLICIT INTEGER OPTIONAL,
+	guaranteedBitrateUL [4] IMPLICIT INTEGER OPTIONAL,
+	guaranteedBitrateDL [5] IMPLICIT INTEGER OPTIONAL,
+	aRP [6] IMPLICIT INTEGER OPTIONAL
+}
+
+ETSIAddress ::= AddressString
+
+EventBasedChargingInformation ::= SEQUENCE
+{
+	numberOfEvents [1] INTEGER,
+	eventTimeStamps [2] SEQUENCE OF TimeStamp OPTIONAL
+}
+
+FailureHandlingContinue ::= BOOLEAN
+FFDAppendIndicator ::= BOOLEAN
+FreeFormatData ::= OCTET STRING (SIZE (1..160))
+GSNAddress ::= IPAddress
+IMEI ::= TBCD-STRING (SIZE (8))
+IMSI ::= TBCD-STRING (SIZE (3..8))
+
+IPAddress ::= CHOICE
+{
+	iPBinaryAddress IPBinaryAddress,
+	iPTextRepresentedAddress IPTextRepresentedAddress
+}
+
+IPBinaryAddress ::= CHOICE
+{
+	iPBinV4Address [0] IMPLICIT OCTET STRING (SIZE(4)),
+	iPBinV6Address [1] IMPLICIT OCTET STRING (SIZE(16))
+}
+
+IPTextRepresentedAddress ::= CHOICE
+{
+	iPTextV4Address [2] IA5String (SIZE(7..15)),
+	iPTextV6Address [3] IA5String (SIZE(15..45))
+}
+
+ISDN-AddressString ::= AddressString (SIZE(1..9))
+LocalSequenceNumber ::= INTEGER ((0..4294967295))
+ManagementExtensions ::= SET OF ManagementExtension
+ManagementExtension ::= SEQUENCE
+{
+	identifier OBJECT IDENTIFIER,
+	significance [1] BOOLEAN DEFAULT TRUE,
+	information [2] GprsCdrExtensions
+}
+MSISDN ::= ISDN-AddressString
+MSTimeZone ::= OCTET STRING (SIZE (2))
+NodeID ::= IA5String (SIZE(1..20))
+
+PDPAddress ::= CHOICE
+{
+	iPAddress [0] EXPLICIT IPAddress,
+	eTSIAddress [1] EXPLICIT ETSIAddress
+}
+
+PDPType ::= OCTET STRING (SIZE(2))
+PLMN-Id ::= OCTET STRING (SIZE(3))
+
+PSFurnishChargingInformation ::= SEQUENCE
+{
+	pSFreeFormatData [1] FreeFormatData,
+	pSFFDAppendIndicator [2] FFDAppendIndicator OPTIONAL
+}
+
+QoSInformation ::= OCTET STRING (SIZE (4..15))
+RatingGroupId ::= INTEGER
+RATType ::= INTEGER ((0..255))
+ResultCode ::= INTEGER
+
+ServiceConditionChange ::= ENUMERATED
+{
+	qoSChange (0),
+	sGSNChange (1),
+	sGSNPLMNIDChange (2),
+	tariffTimeSwitch (3),
+	pDPContextRelease (4),
+	rATChange (5),
+	serviceIdledOut (6), -- QHT expiry
+	serviceStop (9),
+	dCCATimeThresholdReached (10), -- DCCA quota
+	dCCAVolumeThresholdReached (11), -- DCCA quota
+	dCCAServiceSpecificUnitThresholdReached (12),
+	dCCATimeExhausted (13), -- DCCA quota
+	dCCAVolumeExhausted (14), -- DCCA quota
+	dCCAValidityTimeout (15), -- DCCA quota validity
+	reserved (16), -- old: returnRequested
+	dCCAReauthorisationRequest (17), -- DCCA quota
+	dCCAContinueOngoingSession (18), -- DCCA failure handling
+	dCCARetryAndTerminateOngoingSession (19), -- DCCA failure
+	dCCATerminateOngoingSession (20), -- DCCA failure handling,
+	cGI-SAIChange (21),-- User location information
+	dCCAServiceSpecificUnitExhausted (23), -- DCCA quota
+	recordClosure (24) -- eG-CDR closure
+}
+
+ServiceConditionChangePGW ::= BIT STRING 
+
+ServiceIdentifier ::= INTEGER ((0..4294967295))
+TBCD-STRING ::= OCTET STRING
+TimeStamp ::= OCTET STRING (SIZE(9))
+
+GprsCdrExtensions ::= SET
+{
+	creditControlInfo [2] CreditControlInfo OPTIONAL,
+	policyControlInfo [3] PolicyControlInfo OPTIONAL,
+	userCategory [5] INTEGER OPTIONAL,
+	ruleSpaceId [6] IA5String OPTIONAL,
+	serviceContainers [7] SEQUENCE OF ServiceContainer OPTIONAL,
+	timeReports [8] SEQUENCE OF TimeReport OPTIONAL
+}
+
+ActiveTimeMethod ::= ENUMERATED
+{
+	duration (1),
+	inactivityIncluded (2),
+	inactivity (3),
+	activePeriods (4)
+}
+
+CreditControlFailureReport ::= SEQUENCE
+{
+	requestType [0] CreditRequestType,
+	requestStatus [1] CreditRequestStatus,
+	resultCode [2] CreditResultCode OPTIONAL,
+	ccRequestNumber [12] INTEGER OPTIONAL
+}
+
+CreditControlInfo ::= SEQUENCE
+{
+	creditControlFailureReport [6] CreditControlFailureReport OPTIONAL,
+	creditControlSessionId [7] OCTET STRING (SIZE(1..255)) OPTIONAL,
+	ccsRealm [8] OCTET STRING (SIZE(1..255)) OPTIONAL
+}
+
+CreditRequestType ::= ENUMERATED
+{
+	start (0),
+	interim (1),
+	stop (2)
+}
+
+CreditRequestStatus ::= ENUMERATED
+{
+	unsent (0),
+	noAnswer (1),
+	failure (2)
+}
+
+CreditResultCode ::= INTEGER
+
+PolicyControlFailureReport ::= SEQUENCE
+{
+	requestType [0] PolicyRequestType,
+	requestStatus [1] PolicyRequestStatus,
+	resultCode [2] PolicyResultCode OPTIONAL,
+	stopTime [5] TimeStamp OPTIONAL
+}
+
+PolicyControlInfo ::= SEQUENCE
+{
+	policyControlFailureReport [4] PolicyControlFailureReport OPTIONAL,
+	pcsRealm [6] OCTET STRING (SIZE(1..255)) OPTIONAL,
+	policyControlSessionId [7] OCTET STRING (SIZE(1..255)) OPTIONAL
+}
+
+PolicyRequestType ::= ENUMERATED
+{
+	start (0),
+	interim (1),
+	stop (2)
+}
+
+PolicyRequestStatus ::= ENUMERATED
+{
+	unsent (0),
+	noAnswer (1),
+	failure (2)
+}
+
+PolicyResultCode ::= INTEGER
+
+ServiceContainer ::= SEQUENCE
+{
+	ratingGroup [1] RatingGroupId,
+	serviceIdentifier [2] ServiceIdentifier OPTIONAL,
+	localSequenceNumber [3] LocalSequenceNumber OPTIONAL,
+	method [4] ActiveTimeMethod OPTIONAL,
+	inactivity [5] INTEGER OPTIONAL,
+	resolution [6] INTEGER OPTIONAL,
+	ccRequestNumber [7] INTEGER OPTIONAL,
+	serviceSpecificUnits [8] INTEGER OPTIONAL,
+	listOfURI [9] URIS OPTIONAL
+}
+
+URIS ::= SET OF URI
+
+TimeReport ::= SEQUENCE
+{
+	ratingGroup [1] RatingGroupId,
+	startTime [2] TimeStamp,
+	endTime [3] TimeStamp,
+	dataVolumeUplink [4] DataVolumeGPRS OPTIONAL,
+	dataVolumeDownlink [5] DataVolumeGPRS OPTIONAL
+}
+
+URI ::= SEQUENCE
+{
+	count [1] INTEGER OPTIONAL,
+	uri [2] IA5String OPTIONAL,
+	uriIdentifier [3] INTEGER OPTIONAL,
+	uriDataVolumeUplink [4] INTEGER OPTIONAL,
+	uriDataVolumeDownlink [5] INTEGER OPTIONAL,
+	listOfUriTimeStamps [6] SET OF TimeStamp OPTIONAL
+}
+
+ServingNodeType ::= ENUMERATED
+{
+	sGSN (0),
+	pMIPSGW (1),
+	gTPSGW (2),
+	ePDG (3),
+	hSGW (4),
+	mME (5),
+	tWAN (6)
+}
+END

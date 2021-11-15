@@ -1,0 +1,990 @@
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '381272593'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0AA2099C'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '0'D
+            dataVolumeGPRSDownlink : '0'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301224542B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301224172B0000'H
+    duration : '37'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '0'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92565'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '381272593'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '345575721'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A09640C'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '0'D
+            dataVolumeGPRSDownlink : '0'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301227432B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301225192B0000'H
+    duration : '144'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '1'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92571'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '345575721'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '381272637'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0AC24284'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '0'D
+            dataVolumeGPRSDownlink : '3429'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301230142B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301227492B0000'H
+    duration : '145'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '2'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92565'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '381272637'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '345575790'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A5AFA26'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '0'D
+            dataVolumeGPRSDownlink : '5868'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301232442B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301230192B0000'H
+    duration : '145'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '3'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92571'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '345575790'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '345575825'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A5D797A'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '0'D
+            dataVolumeGPRSDownlink : '0'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301235132B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301232492B0000'H
+    duration : '144'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '4'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92571'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '345575825'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '345575874'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A12D65F'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '14043'D
+            dataVolumeGPRSDownlink : '0'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301238372B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301236132B0000'H
+    duration : '144'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '5'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92571'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '345575874'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '345575910'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A59AF65'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '257295'D
+            dataVolumeGPRSDownlink : '7936050'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301239342B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301238432B0000'H
+    duration : '51'D
+    causeForRecClosing : '16'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '6'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92571'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '345575910'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '345575910'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A59AF65'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '45580'D
+            dataVolumeGPRSDownlink : '8146479'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301239532B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301239342B0000'H
+    duration : '19'D
+    causeForRecClosing : '16'D
+    recordSequenceNumber : '2'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '7'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92571'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '345575910'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '345575910'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A59AF65'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '43818'D
+            dataVolumeGPRSDownlink : '1975962'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301241072B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301239532B0000'H
+    duration : '74'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '3'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '8'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92571'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '345575910'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '34787749'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A0F128C'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '386919'D
+            dataVolumeGPRSDownlink : '6414089'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301243372B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301241122B0000'H
+    duration : '145'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '9'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92571'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '34787749'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '405264910'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A906A85'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '143468'D
+            dataVolumeGPRSDownlink : '2536092'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301246062B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301243412B0000'H
+    duration : '145'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '10'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92565'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '405264910'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '57341618'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A12F4BD'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '102230'D
+            dataVolumeGPRSDownlink : '1238517'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301248532B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301246292B0000'H
+    duration : '144'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '11'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92571'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '57341618'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '57341640'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A084D7E'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '303235'D
+            dataVolumeGPRSDownlink : '7889728'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301250332B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301249162B0000'H
+    duration : '77'D
+    causeForRecClosing : '16'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '12'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92571'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '57341640'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '57341640'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A084D7E'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '33415'D
+            dataVolumeGPRSDownlink : '1939240'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301251412B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301250332B0000'H
+    duration : '68'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '2'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '13'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92571'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '57341640'D
+}
+SGW_R9.GPRSRecord.sGWRecord
+{
+    recordType : '84'D
+    servedIMSI : '26000114590431F8'H
+    s-GWAddress
+    {
+        iPBinV4Address : '0A92D6C1'H
+    }
+    chargingID : '300234712'D
+    servingNodeAddress
+    {
+        iPBinV4Address : '0A92D6F3'H
+    }
+    accessPointNameNI : "internet"
+    pdpPDNType : 'FF01'H
+    servedPDPPDNAddress
+    {
+        iPAddress
+        {
+            iPBinV4Address : '0A927DBC'H
+        }
+    }
+    listOfTrafficVolumes
+    {
+        [0]
+        {
+            dataVolumeGPRSUplink : '194375'D
+            dataVolumeGPRSDownlink : '1510086'D
+            changeCondition : 'recordClosure (2)'
+            changeTime : '2108301254102B0000'H
+            userLocationInformation : '1816F8100BCF16F81000141628'H
+            ePCQoSInformation
+            {
+                qCI : '6'D
+                maxRequestedBandwithUL : '0'D
+                maxRequestedBandwithDL : '0'D
+                guaranteedBitrateUL : '0'D
+                guaranteedBitrateDL : '0'D
+                aRP : '88'D
+            }
+        }
+    }
+    recordOpeningTime : '2108301251462B0000'H
+    duration : '144'D
+    causeForRecClosing : '0'D
+    recordSequenceNumber : '1'D
+    nodeID : "LIMO3EPG01-SGW"
+    localSequenceNumber : '14'D
+    servedMSISDN : '91325355320926'H
+    chargingCharacteristics : '0000'H
+    servingNodePLMNIdentifier : '16F810'H
+    servedIMEISV : '5383018067340162'H
+    rATType : '6'D
+    mSTimeZone : '0000'H
+    sGWChange : '0'D
+    servingNodeType
+    {
+        [0] : 'mME (5)'
+    }
+    p-GWAddressUsed
+    {
+        iPBinV4Address : 'C4C92565'H
+    }
+    p-GWPLMNIdentifier : '261000'H
+    pDNConnectionID : '300234712'D
+}
