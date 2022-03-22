@@ -1,5 +1,5 @@
 job("build and publish"){
-    container(displayName = "Run & Publish", image = "4.10.3-jre8-alpine") {
+    container(displayName = "Run & Publish", image = "gradle:4.10.3-jre8-alpine") {
         kotlinScript { api ->
             api.gradlew("build")
             try {
