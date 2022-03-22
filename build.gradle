@@ -1,16 +1,72 @@
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
-version '1.0-SNAPSHOT'
+def buildVersion = 82736
+
+version '1.0' + '.' + buildVersion
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenLocal()
     mavenCentral()
+//    maven {
+//        url "https://maven.pkg.jetbrains.space/quantum-soft/p/liberia-mediation/ericsson-lte"
+//        credentials {
+//            username = spaceUsername
+//            password = spacePassword
+//        }
+//    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = "org.quantum.soft"
+            artifactId = "ericsson-lte"
+            version = version
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "https://maven.pkg.jetbrains.space/quantum-soft/p/liberia-mediation/ericsson-lte"
+            credentials {
+                username = spaceUsername
+                password = spacePassword
+            }
+        }
+    }
 }
 
 dependencies {
     compile group: 'org.openmuc', name: 'jasn1', version: '1.10.0'
-    
+    implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+    implementation group: 'org.openmuc', name: 'jasn1-compiler', version: '1.10.0'
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    manifest {
+        attributes(
+                "Version": version,
+                "Built-at": LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME),
+                "commit-hash": getGitCurrentCommit()
+        )
+    }
+}
+
+def getGitCurrentCommit() {
+    def gitDir = "$projectDir/.git/"
+    def head = new File(gitDir + "HEAD").text.split(":")
+    if( head.length == 1 ) return head[0].trim()
+    else return  (new File(gitDir + head[1].trim())).text
+
 }
