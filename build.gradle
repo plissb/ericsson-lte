@@ -6,13 +6,13 @@ plugins {
     id 'maven-publish'
 }
 
-def buildVersion = System.getenv("JB_SPACE_EXECUTION_NUMBER") ?: "LOCAL" + LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)
+def buildVersion = System.getenv("JB_SPACE_EXECUTION_NUMBER") ?: "LOCAL" //+ LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)
 def fullVersion = '1.0' + '.' + buildVersion
 
 version fullVersion
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenLocal()
