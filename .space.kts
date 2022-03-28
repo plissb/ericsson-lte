@@ -1,3 +1,3 @@
 job("build and publish"){
-    gradlew("openjdk:11", "build", "publish")
+    gradlew("openjdk:8", "build", "publish")
 }

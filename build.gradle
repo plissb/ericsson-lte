@@ -1,18 +1,52 @@
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-
-plugins {
-    id 'java'
-    id 'maven-publish'
+buildscript {
+    ext {
+        kotlinVersion = '1.2.61'
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven {
+            url 'https://maven.pkg.github.com/quantum-ltd/mc-mediation/'
+            credentials{
+                username = 'pliss-boris'
+                password = ''
+            }
+        }
+    }
+    dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+        classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
+    }
 }
+
+
+
+
+
+apply plugin: 'kotlin'
+apply plugin: 'maven-publish'
+
 
 def buildVersion = System.getenv("JB_SPACE_EXECUTION_NUMBER") ?: "LOCAL" //+ LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)
 def fullVersion = '1.0' + '.' + buildVersion
 
-version fullVersion
-
-sourceCompatibility = JavaVersion.VERSION_11
-targetCompatibility = JavaVersion.VERSION_11
+group = 'com.quantum.soft.ericsson.lte'
+version = fullVersion
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+compileKotlin {
+    kotlinOptions {
+        freeCompilerArgs = ["-Xjsr305=strict"]
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        freeCompilerArgs = ["-Xjsr305=strict"]
+        jvmTarget = "1.8"
+    }
+}
 
 repositories {
     mavenLocal()
@@ -21,7 +55,7 @@ repositories {
         url "https://maven.pkg.jetbrains.space/quantum-soft/p/liberia-mediation/ericsson-lte"
         credentials {
             username = "boris.pliss"
-            password = "hyfceG-mucme1-duccim"
+            password = ""
         }
     }
 }
@@ -40,33 +74,18 @@ publishing {
             url "https://maven.pkg.jetbrains.space/quantum-soft/p/liberia-mediation/ericsson-lte"
             credentials {
                 username = "boris.pliss"
-                password = "hyfceG-mucme1-duccim"
+                password = ""
             }
         }
     }
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-reflect"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation group: 'org.openmuc', name: 'jasn1', version: '1.10.0'
     implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
     implementation group: 'org.openmuc', name: 'jasn1-compiler', version: '1.10.0'
     testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
 
-jar {
-    manifest {
-        attributes(
-                "Version": fullVersion,
-                "Built-at": LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME),
-                "commit-hash": getGitCurrentCommit()
-        )
-    }
-}
-
-def getGitCurrentCommit() {
-    def gitDir = "$projectDir/.git/"
-    def head = new File(gitDir + "HEAD").text.split(":")
-    if( head.length == 1 ) return head[0].trim()
-    else return  (new File(gitDir + head[1].trim())).text
-
-}

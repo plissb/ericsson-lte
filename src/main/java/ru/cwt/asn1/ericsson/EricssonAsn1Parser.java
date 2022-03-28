@@ -1,5 +1,6 @@
 package ru.cwt.asn1.ericsson;
 
+import com.quantum.soft.ericsson.lte.EricssonLteRecord;
 import ru.cwt.asn1.ericsson.sgw_r9.GPRSRecord;
 import ru.cwt.asn1.ericsson.sgw_r9.SGWRecord;
 
@@ -17,6 +18,9 @@ public class EricssonAsn1Parser {
     public static void main(String[] args) throws IOException {
         String fileName = null;
         FileInputStream fis = null;
+
+        List<EricssonLteRecord> records = new ArrayList<>();
+
 
         if (args.length != 1) {
             System.err.println("Usage: EricssonAsn1Parser <file_name>");
@@ -51,14 +55,16 @@ public class EricssonAsn1Parser {
                 fis.getChannel().position(offset);
 
                 offset += call.decode(fis);
-                callEventRecordList.add(call);
-                System.out.println(call);
+                records.add(EricssonLteRecord.Companion.createInstance(call.getSGWRecord()));
+
+//                callEventRecordList.add(call);
+//                System.out.println(call);
             } catch (Exception e) {
                 System.out.println("File: " + fileName);
                 e.printStackTrace(System.out);
                 System.exit(1);
             }
         }
-        System.out.println("CallEventRecords total: " + callEventRecordList.size() + "\n");
+        System.out.println("CallEventRecords total: " + records.size() + "\n");
     }
 }
