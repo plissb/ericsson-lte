@@ -6,7 +6,7 @@ import java.time.LocalDateTime
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
-class EricssonLteRecord(
+data class EricssonLteRecord(
     val recordType: String,
     val servedIMSI: String,
     val sGWAddress: String,

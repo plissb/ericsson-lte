@@ -66,5 +66,6 @@ public class EricssonAsn1Parser {
             }
         }
         System.out.println("CallEventRecords total: " + records.size() + "\n");
+        records.forEach(e -> System.out.println(e.toString()));
     }
 }

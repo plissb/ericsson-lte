@@ -1,3 +1,16 @@
 job("build and publish"){
-    gradlew("openjdk:8", "build", "publish")
+    startOn {
+        gitPush {
+            branchFilter {
+                +"refs/heads/main"
+            }
+        }
+    }
+    container(displayName = "Run gradle build", image = "openjdk:8-alpine") {
+        env["USR_NAME"] = Secrets("user_name")
+        env["USR_PWD"] = Secrets("pwd")
+        shellScript {
+            content = "./gradlew build publish"
+        }
+    }
 }

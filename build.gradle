@@ -75,6 +75,8 @@ publishing {
             credentials {
                 username = "boris.pliss"
                 password = ""
+                username = System.getenv("USR_NAME")
+                password = System.getenv("USR_PWD") // "hyfceG-mucme1-duccim"
             }
         }
     }
