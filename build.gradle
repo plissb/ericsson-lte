@@ -90,4 +90,3 @@ dependencies {
     implementation group: 'org.openmuc', name: 'jasn1-compiler', version: '1.10.0'
     testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
-
