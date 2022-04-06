@@ -151,4 +151,17 @@ data class EricssonLteRecord(
         s.setString(23, pDNConnectionID)
         s.addBatch()
     }
+
+
+    fun toCsvString() = "$recordType, $servedIMSI, $sGWAddress, $chargingID, $servingNodeAddress, $accessPointNameNI," +
+        " $pdpPDNType, $servedPDPPDNAddress, $dataVolumeGPRSUplink, $dataVolumeGPRSDownlink, " +
+        "$recordOpeningTime, $duration, $causeForRecClosing, $recordSequenceNumber, $nodeID, $localSequenceNumber, " +
+        "$servedMSISDN, $chargingCharacteristics, $servingNodePLMNIdentifier, $servedIMEISV, $rATType, " +
+        "$mSTimeZone, $sGWChange, $servingNodeType, $pGWAddressUsed, $pGWPLMNIdentifier, $pDNConnectionID"
+
+    override fun toString(): String {
+        return "EricssonLteRecord(recordType='$recordType', servedIMSI='$servedIMSI', sGWAddress='$sGWAddress', chargingID=$chargingID, servingNodeAddress='$servingNodeAddress', accessPointNameNI='$accessPointNameNI', pdpPDNType='$pdpPDNType', servedPDPPDNAddress='$servedPDPPDNAddress', dataVolumeGPRSUplink=$dataVolumeGPRSUplink, dataVolumeGPRSDownlink=$dataVolumeGPRSDownlink, recordOpeningTime=$recordOpeningTime, duration=$duration, causeForRecClosing='$causeForRecClosing', recordSequenceNumber=$recordSequenceNumber, nodeID='$nodeID', localSequenceNumber=$localSequenceNumber, servedMSISDN='$servedMSISDN', chargingCharacteristics='$chargingCharacteristics', servingNodePLMNIdentifier='$servingNodePLMNIdentifier', servedIMEISV='$servedIMEISV', rATType=$rATType, mSTimeZone='$mSTimeZone', sGWChange=$sGWChange, servingNodeType=$servingNodeType, pGWAddressUsed='$pGWAddressUsed', pGWPLMNIdentifier='$pGWPLMNIdentifier', pDNConnectionID='$pDNConnectionID')"
+    }
+
+
 }

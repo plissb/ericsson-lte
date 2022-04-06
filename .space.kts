@@ -10,10 +10,7 @@ job("build and publish"){
         env["USR_NAME"] = Secrets("user_name")
         env["USR_PWD"] = Secrets("pwd")
         shellScript {
-            content = """
-                echo userName: ${"$"}USR_NAME
-                echo password: ${"$"}USR_PWD
-                ./gradlew build publish""".trimIndent()
+            content = """./gradlew build publish""".trimIndent()
         }
     }
 }
