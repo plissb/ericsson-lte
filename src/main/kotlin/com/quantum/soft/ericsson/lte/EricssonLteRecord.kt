@@ -92,7 +92,7 @@ data class EricssonLteRecord(
         fun createInstance(record: SGWRecord): EricssonLteRecord {
             return EricssonLteRecord(
                 recordType = record.recordType.toString(),
-                servedIMSI = record.servedIMSI.toString(),
+                servedIMSI = record.servedIMSI.toString().tbcdEncode(),
                 sGWAddress = gsnAddressToString(record.sgwAddress),
                 chargingID = record.chargingID.longValue(),
                 servingNodeAddress = gsnAddressToString(record.servingNodeAddress.gsnAddress[0]),
