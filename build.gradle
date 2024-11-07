@@ -21,10 +21,8 @@ apply plugin: 'kotlin'
 apply plugin: 'maven-publish'
 
 
-def buildVersion = System.getenv("BUILD_NUMBER") ?: "LOCAL" //+ LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)
-def fullVersion = '1.0' + '.' + buildVersion
 
-version = fullVersion
+version = System.getenv("BUILD_NUMBER") ?: "0.0.LOCAL"
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 compileKotlin {
@@ -50,7 +48,6 @@ publishing {
         maven(MavenPublication) {
             groupId = "org.quantum.soft"
             artifactId = "ericsson-lte"
-            version = fullVersion
             from components.java
         }
     }
